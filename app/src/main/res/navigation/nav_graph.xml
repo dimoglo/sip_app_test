@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.example.sipapp.ui.main.MainFragment"
+        android:label="FragmentMain">
+
+        <action
+            android:id="@+id/toUserFragment"
+            app:destination="@id/fragment_user">
+
+            <argument
+                android:name="userId"
+                app:argType="integer"/>
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_user"
+        android:name="com.example.sipapp.ui.user.UserFragment"
+        android:label="FragmentUser">
+
+        <argument
+            android:name="userId"
+            app:argType="integer"/>
+    </fragment>
+
+</navigation>
